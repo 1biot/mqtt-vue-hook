@@ -15188,22 +15188,9 @@ const eq = (filter, topic, handleSharedSubscription = false) => {
   }
   return length === topicArray.length;
 };
-const debugVoid = {
-  log: (...data) => {
-    return;
-  },
-  error: (...data) => {
-    return;
-  },
-  warn: (...data) => {
-    return;
-  },
-  info: (...data) => {
-    return;
-  }
-};
+const debugConsole = console;
 const debug = () => {
-  return debugVoid;
+  return debugConsole;
 };
 var common = { eq, debug };
 const messageListenerMap = /* @__PURE__ */ new Map();
